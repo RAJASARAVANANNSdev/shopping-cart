@@ -1,0 +1,57 @@
+.card {
+  width: 250px;
+  padding: 20px;
+  border: 2px solid black;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(137, 145, 215);
+  margin: 20px;
+}
+.card:hover {
+  box-shadow: 0 10px 10px 10px rgba(56, 112, 126, 0.43);
+  cursor: pointer;
+}
+.image_box img {
+  width: 150px;
+  height: 200px;
+  margin-left: 38px;
+  margin-bottom: 10px;
+}
+.details {
+  height: 120px;
+}
+.details p:nth-child(1) {
+  font-weight: bold;
+}
+.details p:nth-child(2) {
+  color: rgb(234, 233, 232);
+  font-weight: bold;
+}
+.details p:nth-child(3) {
+  color: rgb(253, 249, 249);
+  font-size: 1rem;
+  font-weight: bold;
+}
+/* .btncontainer {
+    width: 100%;
+    
+  } */
+.cart-btn {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(82, 102, 218);
+  outline: none;
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 0 22%;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
+.search-box {
+  margin-left: 320px;
+  gap: 1rem;
+}

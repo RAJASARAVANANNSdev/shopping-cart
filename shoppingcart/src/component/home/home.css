@@ -1,0 +1,30 @@
+.warning {
+  height: 60px;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  background-color: rgb(136, 23, 74);
+  font-size: 1.2rem;
+  color: whitesmoke;
+  font-family: monospace;
+  padding: 5px;
+  border-radius: 10px;
+}
+.filter-btn {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 280px;
+}
+button.btn {
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px;
+  margin: 10px;
+  width: 140px;
+  background-color: rgb(119, 176, 174);
+  border: none;
+  border-radius: 10px;
+}
