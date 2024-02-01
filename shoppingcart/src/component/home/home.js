@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+
 import list from "../../data";
 import "./home.css";
 import Card from "../card/card";
-import Search from "../search/search";
+
 const Home = ({ handleClick }) => {
   const [book, updateBook] = useState([]);
 
@@ -29,12 +30,28 @@ const Home = ({ handleClick }) => {
       )
     );
   }
+  function firstBook() {
+    updateBook(
+      list.filter((e) =>
+        e.title
+          .toLowerCase()
+          .includes("My First Book of Pencil Control".toLowerCase())
+      )
+    );
+  }
+
   function allCategories() {
     updateBook(list);
   }
   useEffect(() => {
     updateBook(list);
   }, []);
+  const [item, setItem] = useState("");
+  function handleBtn() {
+    updateBook(
+      list.filter((e) => e.title.toLowerCase().includes(item.toLowerCase()))
+    );
+  }
 
   return (
     <>
@@ -51,13 +68,32 @@ const Home = ({ handleClick }) => {
         <button onClick={brainAct} className="btn">
           BrainActivities
         </button>
+        <button onClick={firstBook} className="btn">
+          First Book
+        </button>
       </div>
-
+      <div className="search-box">
+        <input
+          onChange={(e) => {
+            setItem(e.target.value);
+          }}
+          className="search-input"
+        />
+        <button onClick={handleBtn} className="search-btn">
+          {" "}
+          Search
+        </button>
+      </div>
+      {/* <Search /> */}
+      {/* {document.getElementById("Search-input").innerText === null ? ( */}
       <section>
-        {book.map((item) => (
-          <Card item={item} key={item.id} handleClick={handleClick} />
+        {book.map((i) => (
+          <Card item={i} key={i.id} handleClick={handleClick} />
         ))}
       </section>
+      {/* ) : (
+        <Card />
+      )} */}
     </>
   );
 };

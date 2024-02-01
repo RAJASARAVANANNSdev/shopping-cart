@@ -3,7 +3,7 @@
   padding: 0;
 }
 .container {
-  background-color: rgb(92, 143, 143);
+  background-color: rgb(93, 70, 196);
   height: 100px;
   color: #fff;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -12,14 +12,19 @@
 
   padding: 0 2rem;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 .navbar {
-  width: 40%;
+  width: 30%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   list-style: none;
-  float: left;
+  /* align-items: center;
+  align-content: center; */
+  margin: 20px;
+  margin-left: 1000px;
 }
 
 ul.navbar a {
@@ -28,6 +33,14 @@ ul.navbar a {
   align-items: end;
   padding: 10px;
   float: right;
+}
+.size {
+  color: rgb(235, 228, 228);
+  margin: 10px 43px 4px -22px;
+  padding: 5px;
+  background-color: rgb(73, 169, 78);
+  border-radius: 5px;
+  font-size: medium;
 }
 
 /* .my_shop {

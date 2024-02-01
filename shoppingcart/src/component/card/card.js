@@ -1,20 +1,35 @@
 import React from "react";
 import "./cards.css";
-function Card({ item, handleCart }) {
-  const { title, author, price, img } = item;
+import { useNavigate } from "react-router-dom";
+
+function Card({ item, handleClick, cart }) {
+  // eslint-disable-next-line no-undef
+
+  const navigation = useNavigate();
+  console.log(item.id);
+
+  function handleCart(item) {
+    handleClick(item);
+  }
+
   return (
-    <div className="card">
-      <div className="image_box">
-        <img src={img} alt="img" />
-      </div>
-      <div className="details">
-        <p>{title}</p>
-        <p>{author}</p>
-        <p>price{price}</p>
+    <div>
+      <div
+        className="card"
+        onClick={() => navigation("/product", { state: item.id })}
+      >
+        <div className="image_box">
+          <img src={item.img} alt="img" />
+        </div>
+        <div className="details">
+          <p>{item.title}</p>
+          <p>{item.author}</p>
+          <p>price : {item.price}₹</p>
+        </div>
       </div>
       <div className="btncontainer">
         <button onClick={() => handleCart(item)} className="cart-btn">
-          Add To cart
+          <p>Add To cart</p>
         </button>
       </div>
     </div>

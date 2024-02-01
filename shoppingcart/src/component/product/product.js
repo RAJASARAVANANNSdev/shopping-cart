@@ -1,21 +1,38 @@
 import React, { useEffect } from "react";
-import list from "../../data";
-import Card from "../card/card";
-
+import Productlist from "./productdata";
+import { useLocation } from "react-router-dom";
+import "./product.css";
 const Product = () => {
   useEffect(() => {
-    // eslint-disable-next-line no-unused-expressions
-    list;
+    // Your useEffect logic here, if needed
   }, []);
+
+  const location = useLocation();
+  const dataid = location.state;
+
+  // Filter the Productlist based on dataid
+  const filteredProducts = Productlist.filter((e) => e.id === dataid);
 
   return (
     <>
-      <section>
-        {list.map((item) => (
-          <Card item={item} key={item.id} />
+      <div>
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="product-card">
+            <img
+              src={product.img}
+              alt={product.title}
+              className="product-image-box"
+            />
+            <div className="product-details">
+              <p>{product.title}</p>
+              <p>Autor:{product.author}</p>
+              <p>Price:{product.price}₹</p>
+            </div>
+          </div>
         ))}
-      </section>
+      </div>
     </>
   );
 };
+
 export default Product;
