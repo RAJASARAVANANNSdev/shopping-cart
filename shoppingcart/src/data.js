@@ -57,7 +57,7 @@ const list = [
   },
   {
     id: 8,
-    title: "Early Learning Library Pack 1",
+    title: "Early Learning Library Pack ",
     author: "by Wonder House Books  | 6 December 2020",
     price: 289,
     img: "https://m.media-amazon.com/images/I/71xMttNhr7L._AC_UY327_FMwebp_QL65_.jpg",
@@ -336,7 +336,7 @@ const list = [
     amount: 1,
   },
   {
-    id: 42,
+    id: 43,
     title: "Brain Activity Book for Kids",
     author: "by Maple Press | 1 September 2021",
     price: 86,
@@ -344,7 +344,7 @@ const list = [
     amount: 1,
   },
   {
-    id: 43,
+    id: 44,
     title: "Willy the Silly Panda",
     author: "by Rebecca Smith  | 14 December 2021",
     price: 120,

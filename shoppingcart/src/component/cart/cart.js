@@ -25,7 +25,7 @@ function Cart({ cart, setCart, handleChange }) {
               <div className="img">
                 <img src={item.img} alt={item.title} />
                 <p>{item.title}</p>
-                <p>price:{item.price}</p>
+                <p>price:{item.price}₹</p>
               </div>
               <div className="btn">
                 <button onClick={() => handleChange(item, +1)}>+</button>

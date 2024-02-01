@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import list from "../../data";
 import "./home.css";
-import Card from "../card/card";
+import Card from "../../component/card/card";
 
 const Home = ({ handleClick }) => {
   const [book, updateBook] = useState([]);
@@ -84,16 +84,12 @@ const Home = ({ handleClick }) => {
           Search
         </button>
       </div>
-      {/* <Search /> */}
-      {/* {document.getElementById("Search-input").innerText === null ? ( */}
+
       <section>
         {book.map((i) => (
           <Card item={i} key={i.id} handleClick={handleClick} />
         ))}
       </section>
-      {/* ) : (
-        <Card />
-      )} */}
     </>
   );
 };

@@ -4,10 +4,12 @@ import Home from "./component/home/home";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Cart from "./component/cart/cart";
 import Product from "./component/product/product";
+import Form from "./component/form/form";
+import Formlogin from "./component/form/formlogin";
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  const navigation = useNavigate(); 
+  const navigation = useNavigate();
 
   const HandleClick = (item) => {
     let isPresent = false;
@@ -52,6 +54,8 @@ const App = () => {
             <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
           }
         ></Route>
+        <Route exact path="/form" element={<Form />}></Route>
+        <Route path="/login" element={<Formlogin />}></Route>
       </Routes>
     </>
   );

@@ -17,6 +17,9 @@ const Navbar = ({ size }) => {
         <li>
           <span className="size">{size}</span>
         </li>
+        <li>
+          <Link to="/form"> Form</Link>
+        </li>
       </ul>
     </nav>
   );
