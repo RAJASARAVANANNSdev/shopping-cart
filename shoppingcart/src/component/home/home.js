@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import list from "../../data";
 import "./home.css";
 import Card from "../../component/card/card";
-
 const Home = ({ handleClick }) => {
   const [book, updateBook] = useState([]);
 
